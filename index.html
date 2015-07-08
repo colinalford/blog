@@ -9,10 +9,27 @@
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     </head>
     <body>
+        <section>
+            <div id="blanket"></div>
+            <div id="popup">
+                <form class="login">
+                    <div id="username-container">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username">
+                    </div>
+                    <div id="password-container">
+                        <label for="password">Password:</label>
+                        <input type="text" name="password">
+                    </div>
+                    <button id="login-submit">Login</button>
+                </form>
+            </div>
+        </section>
+
         <header>
             <span>
                 <h1>Colin's Blog</h1>
-                <h1 id="new-blog-entry">+</h1>
+                <h1 class="inline-block hidden" id="new-blog-entry">+</h1>
             </span>
         </header>
 
@@ -35,7 +52,7 @@
             </div>
             <div id="displayArea"></div>
         </main>
-        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="app.js"></script>
     </body>

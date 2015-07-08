@@ -14,7 +14,7 @@ var main = function(){
       if (title !== '' && content !=='') {
           var newTitle = $('<h2>').text(title);
           var newBlog = $('<div>').addClass('blog-main-entry').text(content);
-          var date = $('<div>').addClass('blog-date').text(mm+'/'+dd+'/'+yy);
+          var date = $('<h2>').addClass('blog-date').text(mm+'/'+dd+'/'+yy);
           var newContainer = $('<div>').addClass('blog-container');
           $('#displayArea').prepend(newContainer);
 
@@ -47,9 +47,25 @@ var main = function(){
     });
 
     $('#blog').on('keypress', function(e) {
+        // run function on pressing enter
         if(e.keyCode === 13) {
             addCommentFromInputBox();
         }
+    });
+
+    $(document).on('keydown', function(e){
+        // Pops up on Ctrl+Alt+L
+        if(e.shiftKey && e.altKey && e.keyCode === 76) {
+            $('#blanket').toggle();
+            $('#popup').toggle();
+        }
+    });
+
+    $('#login-submit').on('click', function(e){
+        e.preventDefault();
+        $('#blanket').toggle();
+        $('#popup').toggle();
+        $('#new-blog-entry').toggleClass('hidden');
     });
 };
 
