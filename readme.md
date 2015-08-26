@@ -1,5 +1,8 @@
 # My Blog
 
+##UPDATE
+This project became the blog2 repo and is now hosted online at www.colinalford.com.
+
 ## Project
 The goal of this project is to build a working blog with the MEAN stack. When finished, this will be the first project where I have built the back and frontend myself without any guidance from a tutorial.
 
